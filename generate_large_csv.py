@@ -1,4 +1,4 @@
-# This script generates two large CSV files with 40 columns and 1,000,000 rows each for testing purposes.
+# This script generates a large CSV files with 40 columns and 1,000,000 rows each for testing purposes.
 import csv
 import random
 
@@ -20,3 +20,4 @@ def generate_csv(filename, diff_row=None, diff_col=None):
             writer.writerow(row)
 
 generate_csv("test1.csv")
+
