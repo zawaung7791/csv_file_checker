@@ -20,6 +20,3 @@ def generate_csv(filename, diff_row=None, diff_col=None):
             writer.writerow(row)
 
 generate_csv("test1.csv")
-# test2.csv will have a single value different in row 500000, column 20
-# (to allow for comparison testing)
-generate_csv("test2.csv", diff_row=500000, diff_col=19)

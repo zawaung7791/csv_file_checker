@@ -19,7 +19,7 @@ def scramble(
         raise typer.Exit(1)
 
     df = pl.read_csv(str(input_csv))
-    df = df.sample(frac=1.0, with_replacement=False)
+    df = df.sample(n=df.height, with_replacement=False)
     columns = df.columns
     random.shuffle(columns)
     df = df.select(columns)
@@ -36,3 +36,4 @@ def scramble(
 
 if __name__ == "__main__":
     app()
+    
